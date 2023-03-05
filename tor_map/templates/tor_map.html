@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+    <title>My App</title>
+    <style>
+        /* style for right side bar */
+        .sidebar {
+          position: fixed;
+          top: 0;
+          right: 0;
+          height: 100%;
+          width: 20%;
+          /*background-color: #f1f1f1;*/
+          padding: 20px;
+        }
+        /* style for buttons */
+        .button {
+          background-color: #4CAF50; /* Green */
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          width: 100%;
+        }
+        
+        /* style for IP data */
+        .ip-data {
+          margin-bottom: 20px;
+        }
+        
+        /* style for h1 */
+        h1 {
+          margin-top: 50px;
+        }
+        
+        /* style for image */
+        .shrinkToFit {
+          max-width: 50px;
+          max-height: 50px;
+        }
+    
+  </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>Current IP & data:</h2>
+      <div class="ip-data">
+        <p>IP: {put current ip here}</p>
+        <p>Location: {Country, state, city}</p>
+        <p>Other: {additional data about ip}</p>
+      </div>
+      <button class="button">Change IP</button>
+    </div>
+    <h1>Ip Location Map</h1>
+    <!--<img src="{% static 'image.png' %}" alt="Tor Map with Pins" class ='shrinkToFit'>-->
+    <img src="{{ image_url }}" alt="Tor Map with Pins" class ='shrinkToFit'>
+
+  </body>
+</html>

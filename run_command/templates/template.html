@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    {% include 'navbar.html' %}
+    <link href="{% static 'template.css' %}" rel="stylesheet">
+    <title>My App</title>
+  </head>
+  <body>
+    <form method="post">
+      {% csrf_token %}
+      <label class = "enter-ip">
+        Enter server IP:
+        <input type="text" id="ip" name="ip">
+      </label>
+      <!-- Add input field for the command -->
+      <label class="enter-cmd">
+        Enter command:
+        <input type="text" id="command" name="command">
+      </label>
+      <!-- Change button type to "submit" -->
+      <button type="submit" class = "connect-ip">Connect IP and run CMDs</button>
+      <p id="output"></p>
+    </form>
+
+    {% if output %}
+      <pre  class="output">{{ output|safe }}</pre>
+    {% endif %}
+
+    <script>
+      function runPythonScript() {
+        var ip = document.getElementById("ip").value;
+        var command = document.getElementById("command").value; // Add
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/run-command/");
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.setRequestHeader("X-CSRFToken", getCookie("csrftoken"));
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById("output").textContent = xhr.responseText;
+          }
+        };
+        // Pass both IP and command to server
+        xhr.send("ip=" + ip + "&command=" + command);
+      }
+
+      function getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+          var cookies = document.cookie.split(';');
+          for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+              cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+              break;
+            }
+          }
+        }
+        return cookieValue;
+      }
+    </script>
+  </body>
+</html>

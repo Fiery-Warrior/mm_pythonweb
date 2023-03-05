@@ -1,0 +1,29 @@
+
+/* Element | http://127.0.0.1:8000/run_command/ */
+
+.enter-cmd {
+    position: absolute;
+    top: 180px;
+    left: 10px;
+  }
+  
+  /* Element | http://127.0.0.1:8000/run_command/ */
+  
+  .enter-ip {
+    position: absolute;
+    top: 140px;
+    left: 10px;
+  }
+  
+  /* Element | http://127.0.0.1:8000/run_command/ */
+  
+  .connect-ip {
+    position: absolute;
+    top: 140px;
+    left: 25%;
+  }
+  
+  .output{
+    position: absolute;
+    top: 210px;
+  }

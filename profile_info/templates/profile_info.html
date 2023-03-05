@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile Information</title>
+  </head>
+  <body>
+    <div style="width: 500px; height: auto; margin: 0 auto; padding: 20px; background-color: black; color: white;">
+      <img src="{{ profile_data.profile_pic }}" style="float: left; width: 200px; height: 200px;">
+      <div style="float: right; width: 250px; height: 200px;">
+        <h2>Name: {{ profile_data.name }}</h2>
+        <p>Followers: {{ profile_data.followers }}</p>
+        <p>Following: {{ profile_data.following }}</p>
+        <p>Phone Number: {{ profile_data.phone_number }}</p>
+        <p>Email: {{ profile_data.email }}</p>
+      </div>
+      <div style="clear: both;"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <content>
+        <form method="post">
+            {% csrf_token %}
+            <label>
+              Enter server IP:
+              <input type="text" id="ip" name="ip">
+            </label>
+            <button type="button" onclick="runPythonScript()">Run Python Script</button>
+            <p id="output"></p>
+          </form>
+          
+        
+        {% if output %}
+            <pre>{{ output|safe }}</pre>
+        {% endif %}
+    </content>
+</html>
+
+

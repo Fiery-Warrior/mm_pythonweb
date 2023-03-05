@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <content>
+        <form method="post">
+            {% csrf_token %}
+            <style>
+              .loading {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 24px;
+                font-weight: bold;
+              }
+
+            </style>
+            <input type="password" name="password">
+            <input type="submit" value="Submit">
+        </form>
+        {% if loading %}
+            <div class="loading">Loading...</div>
+        {% else %}
+            {% if packet_output %}
+                <h3>Packet Capture Results</h3>
+                <pre>{{ packet_output }}</pre>
+            {% endif %}
+            {% comment %}
+            <p>{{ packet_output }}</p>
+            {% endcomment %}
+        {% endif %}
+    </content>
+
+</html>

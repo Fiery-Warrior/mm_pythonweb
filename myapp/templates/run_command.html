@@ -1,0 +1,13 @@
+<h1>Run Command</h1>
+
+<form action="{% url 'run_command' %}" method="post">
+  {% csrf_token %}
+  <input type="text" name="command">
+  <input type="submit" value="Run Command">
+</form>
+
+{% if result %}
+<pre>
+{{ result|escape }}
+</pre>
+{% endif %}

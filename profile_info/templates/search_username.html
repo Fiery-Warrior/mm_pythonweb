@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Enter Instagram Username</title>
+  </head>
+  <body>
+    <div style="width: 500px; height: auto; margin: 0 auto; padding: 20px; background-color: black; color: white;">
+      <form method="POST">
+        {% csrf_token %}
+        <label for="username">Enter Instagram Username:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </body>
+</html>
