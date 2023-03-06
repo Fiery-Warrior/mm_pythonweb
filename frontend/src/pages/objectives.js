@@ -1,8 +1,10 @@
 import React from 'react';
-
+import Notepad from './Notepad/Notepad.jsx';
 const Objectives = () => {
 return (
-	<div></div>
+	<div>
+		<Notepad />
+	</div>
 );
 };
 
