@@ -12,6 +12,7 @@ import Install from './pages/install';
 import Control from './pages/control';
 import Objectives from './pages/objectives';
 import Hambar from './pages/hambar';
+import FileDisplayW from './pages/Weapon/FileDisplayW';
 import Navbar from './Navbar';
 
 
@@ -39,6 +40,8 @@ function App() {
                 <Route path='/control' element={<Control/>} />
                 <Route path='/objectives' element={<Objectives/>} />
                 <Route path='/Hambar' element={<Hambar/>} />
+                <Route path='/FileDisplayW' element={<FileDisplayW/>} />
+
             </Routes>
             </Router>
 

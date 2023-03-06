@@ -31,7 +31,7 @@ export default function Rshell() {
     </Typography>
   </CardContent>
   <CardActions>
-    <a href="http://127.0.0.1:8000/run_command/" target="_blank">
+    <a href="http://127.0.0.1:8000/filedisplayw/" target="_blank">
     <Typography className='desc'>
       Connects to victim IP -Server- <br/> allows Client -Your machine- to connect to Server CLI
     </Typography>

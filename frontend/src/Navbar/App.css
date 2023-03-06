@@ -2,6 +2,7 @@
 
 .App {
   background-color: #151313;
+  border-bottom: 3px solid #fff;
 }
 
 .header {

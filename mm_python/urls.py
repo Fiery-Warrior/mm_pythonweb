@@ -70,6 +70,7 @@ urlpatterns = [
 
     path('hambar/', views.index),
 
+    path('filedisplayw/', views.index),
 
 
 #remember to put the comma ,
