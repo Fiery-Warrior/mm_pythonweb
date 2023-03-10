@@ -24,7 +24,7 @@ export default function BasicCard() {
     <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
     </Typography>
     <Typography variant="h5" component="div" className='title'>
-      Individual
+      Username
     </Typography>
     <Typography className ='provide'>
       Provide ≥ 1
