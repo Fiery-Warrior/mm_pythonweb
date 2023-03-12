@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     #'mm_python',
     'myapp',
     'hello',
-    'newyear',
+    #'newyear',
     'tasks',
     'web_terminal',
     'scanning',
@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'profile_info',
     'tor_map',
     'ip_map',
+    'sherlock_search',
     #add each new app, aka project here include , 'comma'
 
 ]

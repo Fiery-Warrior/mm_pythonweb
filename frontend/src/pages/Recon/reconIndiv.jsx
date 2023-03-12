@@ -31,7 +31,7 @@ export default function BasicCard() {
     </Typography>
   </CardContent>
   <CardActions>
-    <a href="http://127.0.0.1:8000/profile_info/" target="_blank">
+    <a href="http://127.0.0.1:8000/sherlock/search/" target="_blank">
     <Typography className='desc'>
       IP, username, social-media, email-address,<br/> phone-number, home-address 
     </Typography>

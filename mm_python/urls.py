@@ -27,7 +27,7 @@ urlpatterns = [
 
     path('hello/', include('hello.urls')),
 
-    path('newyear/', include('newyear.urls')), #remember to put the comma ,
+    #path('newyear/', include('newyear.urls')), #remember to put the comma ,
 
     path('tasks/', include('tasks.urls')),
 
@@ -48,6 +48,9 @@ urlpatterns = [
     path('', include('ip_map.urls')),
 
     path('profile_info/', include('profile_info.urls')),
+
+    path('sherlock/', include('sherlock_search.urls')),
+
 
 
     path('reconicon/', views.index),
@@ -71,6 +74,9 @@ urlpatterns = [
     path('hambar/', views.index),
 
     path('filedisplayw/', views.index),
+
+    path('filedisplaykey/', views.index),
+
 
 
 #remember to put the comma ,

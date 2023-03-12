@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sherlock Search Results</title>
+</head>
+<body>
+  {% if usernames %}
+    <h2>Usernames:</h2>
+    <ul>
+      {% for username in usernames %}
+        <li>{{ username }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No usernames found.</p>
+  {% endif %}
+</body>
+</html>

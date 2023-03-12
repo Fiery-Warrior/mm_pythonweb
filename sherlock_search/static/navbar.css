@@ -5,12 +5,15 @@
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  position: sticky;
+  /*position: sticky;*/
   top: 0;
   z-index: 999;
   flex-direction: row;
   min-height: 120px;
   background-color: #000;
+  position: fixed; /* Set the navbar to fixed position */
+  width: 100%;
+  left: 0;
   }
   
   .navbar-container {
@@ -19,7 +22,7 @@
   height: 80px;
   z-index: 1;
   width: 100%;
-  max-width: 1650px;
+  max-width: 100%;
   display: flex;
   flex-direction: row;
   background-color: #000000; /*#1b2b4d*/
@@ -36,7 +39,6 @@
     padding-top: 1%;
     padding-bottom: 2%;
     padding-left: 1%;
-    padding-right: 5%; 
   }
   
   .menu-icon {
@@ -56,7 +58,9 @@
     align-items: center;
     list-style: none;
     text-align: center;
-    margin-right: -22px;
+    /*margin-right: -22px;*/
+    z-index: 1000;
+
   }
   
 
@@ -120,16 +124,6 @@
   
   }
 
-  .profile {
-    position: absolute;
-    top: 1%;
-    right: 0px;
-    font-size: 50px; 
-    color: rgb(222, 226, 230);
-    padding-top: 1%;
-    padding-left: 2%;
-    padding-right: 2%;
-  }
 
   .nav-item {
   height: 80px;
@@ -138,10 +132,20 @@
   align-items: center;
   list-style: none;
   text-align: center;
-  padding-right: 50px;
+  padding-right: 53px;
   }
   
-  
+  .profile {
+    position: absolute;
+    top: -4%;
+    right: -9px;
+    font-size: 30px !important; 
+    color: rgb(222, 226, 230);
+    padding-top: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
 
   .nav-links {
     border-bottom: 1px dotted #000;
