@@ -13,6 +13,7 @@ import Control from './pages/control';
 import Objectives from './pages/objectives';
 import Hambar from './pages/hambar';
 import FileDisplayW from './pages/Weapon/FileDisplayW';
+import FileDisplaykey from './pages/Weapon/keylogger/FileDisplaykey';
 import Navbar from './Navbar';
 
 
@@ -41,6 +42,7 @@ function App() {
                 <Route path='/objectives' element={<Objectives/>} />
                 <Route path='/Hambar' element={<Hambar/>} />
                 <Route path='/FileDisplayW' element={<FileDisplayW/>} />
+                <Route path='/FileDisplaykey' element={<FileDisplaykey/>} />
 
             </Routes>
             </Router>

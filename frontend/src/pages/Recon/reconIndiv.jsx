@@ -24,14 +24,14 @@ export default function BasicCard() {
     <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
     </Typography>
     <Typography variant="h5" component="div" className='title'>
-      Individual
+      Username
     </Typography>
     <Typography className ='provide'>
       Provide ≥ 1
     </Typography>
   </CardContent>
   <CardActions>
-    <a href="http://127.0.0.1:8000/profile_info/" target="_blank">
+    <a href="http://127.0.0.1:8000/sherlock/search/" target="_blank">
     <Typography className='desc'>
       IP, username, social-media, email-address,<br/> phone-number, home-address 
     </Typography>
