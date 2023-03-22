@@ -4,7 +4,7 @@ const Objectives = () => {
 return (
 	<div>
 		{/*<Notepad />*/}
-		<h1>Objectives will go here - maybe switch control with objectives or combine</h1>
+		<h1>Control is for inital connections, so it will show machine/user info whenever it gets a conection</h1>
 	</div>
 );
 };

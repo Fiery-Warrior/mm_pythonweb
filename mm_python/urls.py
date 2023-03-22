@@ -51,6 +51,9 @@ urlpatterns = [
 
     path('sherlock/', include('sherlock_search.urls')),
 
+    path('connections/', include('connections.urls')),
+
+
 
 
     path('reconicon/', views.index),

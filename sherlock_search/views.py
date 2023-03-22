@@ -1,4 +1,4 @@
-#takes a few minutes to load (1 min 40sec), does not show anything on browser until it has all the results
+#takes a few minutes to load (2 min 50sec), does not show anything on browser until it has all the results
 #site: http://127.0.0.1:8000/sherlock/search/
 import os
 import subprocess

@@ -38,8 +38,8 @@ function App() {
                 <Route path='/delivery' element={<Delivery/>} />
                 <Route path='/exploit' element={<Exploit/>} />
                 <Route path='/install' element={<Install/>} />
-                <Route path='/control' element={<Control/>} />
-                <Route path='/objectives' element={<Objectives/>} />
+                <Route path='/control' element={<Control/>} /> {/*Control is for inital connections, so it will show when ever it gets a conection */}
+                <Route path='/objectives' element={<Control/>} /> {/*Switched them, Objective (actions on obejctives is controling other machine) */}
                 <Route path='/Hambar' element={<Hambar/>} />
                 <Route path='/FileDisplayW' element={<FileDisplayW/>} />
                 <Route path='/FileDisplaykey' element={<FileDisplaykey/>} />

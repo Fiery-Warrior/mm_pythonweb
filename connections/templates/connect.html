@@ -1,0 +1,44 @@
+{% load static %}
+<!--
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My View</title>
+  </head>
+  <body>
+    <h1>My View</h1>
+    <p>This view listens on {{ SERVER_IP }}:{{ SERVER_PORT }} for incoming connections and displays the received data.</p>
+    <form method="post">
+      {% csrf_token %}
+      <input type="submit" name="submit" value="Start Listening">
+    </form>
+    <br>
+    {% if data_received %}
+      <p>Data received: {{ data_received }}</p>
+    {% endif %}
+  </body>
+</html>
+-->
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My View</title>
+  </head>
+  <body>
+    <h1>My View</h1>
+    <p>This view listens on {{ SERVER_IP }}:{{ SERVER_PORT }} for incoming connections and displays the received data.</p>
+    <form method="post">
+      {% csrf_token %}
+      <input type="submit" name="submit" value="Start Listening">
+    </form>
+    <br>
+    {% if connection_info %}
+      <p>{{ connection_info }}</p>
+    {% endif %}
+    {% if data_received %}
+      <p>Data received: {{ data_received }}</p>
+    {% endif %}
+  </body>
+</html>

@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <link href="{% static 'navbar.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a class="navbar-logo" href="http://127.0.0.1:8000/web-terminal/" target="_blank" rel="noopener noreferrer">
+                Moriarty
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="http://127.0.0.1:8000" class="icon-hamburger-menu">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="http://127.0.0.1:8000" class="icon-house">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.torproject.org/" target="_blank" class="icon-tor">
+                        <i class="fa-solid fa-ghost"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/freq" class="icon-circle">
+                        <i class="far fa-clock"></i>
+                    </a>
+                </li>
+                    <li class="nav-item">
+                        <a href="/reconicon" class="icon">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/weapon" class="icon">
+                            <i class="fa-solid fa-bomb"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/delivery" class="icon">
+                            <i class="far fa-envelope"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/exploit" class="icon">
+                            <i class="fas fa-door-open"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/install" class="icon">
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/control" class="icon">
+                            <i class="fa-solid fa-gamepad"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/objectives" class="icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/account" class="profile">
+                            <i class="fa-regular fa-circle-user"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </nav>
+<div class="content">
+    <!-- Your content here -->
+</div>
+</body>
+</html>

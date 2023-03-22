@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'tor_map',
     'ip_map',
     'sherlock_search',
+    'connections',
     #add each new app, aka project here include , 'comma'
 
 ]

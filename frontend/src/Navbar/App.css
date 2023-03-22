@@ -281,12 +281,10 @@ and no smaller than ____px the terminal-output width can be no longer than 55px 
 .icon-hamburger-menu {
   cursor: pointer;
   background-color: transparent;
-  font-size: 43px;
   color: white;
-  padding: 10px 15px;
   border: none;
-
-
+  font-size: 33px;
+  padding: 18px 15px;
   
 }
 
