@@ -136,7 +136,7 @@ function Home() {
             <p>This is considered active recon, and is explained for educational purposes only. if it is used: The Creator (and all who helped with this project) are exempt from any blame</p> 
           </div>
         }
-        image= {clone} className = "img-large"
+        image= {clone} className = "img-large" //image = "https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg"
         underImageDescription = "Due to copyright issues I have used the title of social-media instead of any actual site"
       />
 
