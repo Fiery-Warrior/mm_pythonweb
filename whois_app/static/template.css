@@ -1,0 +1,6 @@
+/*location of input box of username*/
+  .enter-domain {
+    position: absolute;
+    top: 140px;
+    left: 10px;
+  }

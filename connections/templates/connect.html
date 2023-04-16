@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    {% include 'navbar.html' %}
+    <link href="{% static 'template.css' %}" rel="stylesheet" />
+    <title>My View</title>
+    <style>
+      body {
+        padding-top: 130px;
+        background-color: #3d4548;
+        color: white;
+      }
+      /* style the button */
+      input[type="submit"] {
+        background-color: #5e5e5e;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Connections</h1>
+    <p>
+      This view listens on {{ SERVER_IP }}:{{ SERVER_PORT }} for incoming
+      connections and displays the received data. Edit connections\views.py to
+      change server listening IP
+      <br />
+      Edit Connection information
+      <a href="http://127.0.0.1:8000/filedisplaycontrol/">Here</a>
+    </p>
+    <form method="post">
+      {% csrf_token %}
+      <input type="submit" name="submit" value="Start Listening" />
+    </form>
+    <br />
+    <p>{{ connection_info }}</p>
+    <!-- display connection information -->
+    {% if data_received %}
+    <h2>Data received:</h2>
+    <pre>{{ data_received }}</pre>
+    {% endif %}
+  </body>
+</html>
+
+{% comment %} {% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    {% include 'navbar.html' %}
+    <link href="{% static 'template.css' %}" rel="stylesheet" />
+    <title>My View</title>
+    <style>
+      body {
+        padding-top: 130px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Connections</h1>
+    <p>
+      This view listens on {{ SERVER_IP }}:{{ SERVER_PORT }} for incoming
+      connections and displays the received data. Edit connections\views.py to
+      change server listening IP
+    </p>
+    <form method="post">
+      {% csrf_token %}
+      <input type="submit" name="submit" value="Start Listening" />
+    </form>
+    <br />
+    <p>{{ connection_info }}</p>
+    <!-- display connection information -->
+    {% if data_received %}
+    <p>Data received: {{ data_received }}</p>
+    {% endif %}
+  </body>
+</html>
+{% endcomment %}

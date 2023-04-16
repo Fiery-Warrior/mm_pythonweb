@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include 'navbars.html' %}
+
+    <meta charset="utf-8" />
+    <title>WHOIS Lookup</title>
+    <style>
+      body {
+        padding-top: 130px;
+        background-color: #3d4548;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="post">
+      {% csrf_token %}
+      <label for="domain" class="enter-domain">Enter domain:</label>
+      <input type="text" id="domain" name="domain" class="enter-domain" />
+      <input type="submit" value="Search" />
+    </form>
+    {% if data %} {% comment %}
+    <h2>WHOIS data for {{ domain }}</h2>
+    {% endcomment %}
+    <pre class="output-domain">{{ data }}</pre>
+    {% endif %}
+  </body>
+</html>
