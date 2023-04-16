@@ -123,7 +123,7 @@ urlpatterns = [
 
 
 
-    path('whois/', include('whois_app.urls')),
+    # path('whois/', include('whois_app.urls')),
 
 
 
