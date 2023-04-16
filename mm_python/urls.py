@@ -13,33 +13,45 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-#Here is where to Add the URL pattern to the main urls.py file in your project directory
+# Here is where to Add the URL pattern to the main urls.py file in your project directory
 
 from django.contrib import admin
-from django.urls import include, path #make to include 'include' and 'path'
-from . views import index #importing from /home/kali/Desktop/Sr/mm_python/mm_python/views.py for react
-from . import views # needed for adding # react pages urls 
+from django.urls import include, path  # make to include 'include' and 'path'
+# importing from /home/kali/Desktop/Sr/mm_python/mm_python/views.py for react
+from . views import index
+from . import views  # needed for adding # react pages urls
+# makes it so that this is where the web-app starts
+from django.views.generic import RedirectView
 
 urlpatterns = [
+    # makes it so that this is where the web-app starts
+    path('', RedirectView.as_view(url='/home/', permanent=False)),
+
     path('admin/', admin.site.urls),
-    #saying any url that starts with 'myapp' should be rerouted to this area
+    # saying any url that starts with 'myapp' should be rerouted to this area
     path('myapp/', include('myapp.urls')),
 
     path('hello/', include('hello.urls')),
 
-    #path('newyear/', include('newyear.urls')), #remember to put the comma ,
+    # path('newyear/', include('newyear.urls')), #remember to put the comma ,
 
     path('tasks/', include('tasks.urls')),
 
-    path('', index), #if someone calls this empty route it will call the index function
-    
-    #name of app folder
-    path('', include('web_terminal.urls')),    
-    
-    #add additonal steps here
+    # if someone calls this empty route it will call the index function
+    path('', index),
+
+    path('', views.index, name='index'),  # react for Windows
+
+
+    # name of app folder
+    path('', include('web_terminal.urls')),
+
+    # add additonal steps here
     path('', include('scanning.urls')),
 
     path('', include('run_command.urls')),
+
+
 
     path('', include('recon.urls')),
 
@@ -51,12 +63,16 @@ urlpatterns = [
 
     path('sherlock/', include('sherlock_search.urls')),
 
+    path('connections/', include('connections.urls')),
 
 
+
+
+    # Card Body Pages
     path('reconicon/', views.index),
 
     path('weapon/', views.index),
-    
+
     path('delivery/', views.index),
 
     path('exploit/', views.index),
@@ -71,13 +87,46 @@ urlpatterns = [
 
     path('account/', views.index),
 
+    path('home/', views.index),  # default starting url
+
+
     path('hambar/', views.index),
 
+    # Control Links
+    path('filedisplaycontrol/', views.index),
+
+
+    # Weapon Links
     path('filedisplayw/', views.index),
-
     path('filedisplaykey/', views.index),
+    path('filedisplayvirus/', views.index),
+    path('filedisplayworm/', views.index),
+    path('filedisplayjacking/', views.index),
+    path('filedisplaydos/', views.index),
+
+
+    # Delivery links
+    path('filedisplaytext/', views.index),
+    path('filedisplaybluetooth/', views.index),
+    path('filedisplayemail/', views.index),
+    path('filedisplayftp/', views.index),
+    path('filedisplayusb/', views.index),
+    path('filedisplayweb/', views.index),
+
+
+    # Recon Links
+    path('filedisplayip/', views.index),
+    path('filedisplaydomain/', views.index),
+    path('phish/', views.index),
+    path('smedialogin/', views.index),
+    path('filedisplayphone/', views.index),
 
 
 
-#remember to put the comma ,
+    path('whois/', include('whois_app.urls')),
+
+
+
+
+    # remember to put the comma ,
 ]

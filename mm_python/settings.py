@@ -24,9 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^c#r%*daybh30%8e9c+wm$aze$o31l19mfxhc#b_=d+=^y5u0k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True #set to false when making terminal app
+DEBUG = True  # set to false when making terminal app
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.example.com', 'http://127.0.0.1:8000/run_command/']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1',
+                 '.example.com', 'http://127.0.0.1:8000/run_command/']
 
 
 # Application definition
@@ -38,10 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'mm_python',
+    # 'mm_python',
     'myapp',
     'hello',
-    #'newyear',
+    # 'newyear',
     'tasks',
     'web_terminal',
     'scanning',
@@ -51,7 +52,9 @@ INSTALLED_APPS = [
     'tor_map',
     'ip_map',
     'sherlock_search',
-    #add each new app, aka project here include , 'comma'
+    'connections',
+
+    # add each new app, aka project here include , 'comma'
 
 ]
 
@@ -72,7 +75,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'myapp/templates'),
-            os.path.join(BASE_DIR , 'frontend/build'), #for react
+            os.path.join(BASE_DIR, 'frontend', 'build'),  # for react
             os.path.join(BASE_DIR, 'templates'),
 
         ],
@@ -146,13 +149,14 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-#for react
+# for react
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'frontend/build/static'),
-    os.path.join(BASE_DIR, 'reconr/build/static'),
+    os.path.join(BASE_DIR, 'frontend', 'build', 'static'),
+    os.path.join(BASE_DIR, 'reconr', 'build', 'static'),
     os.path.join(BASE_DIR, "static"),
 
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

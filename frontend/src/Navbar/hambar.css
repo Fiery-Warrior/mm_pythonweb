@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: #2C3639;/*vs code color #2C2C32*//*#0f1f3ced;*//* Originally black, this is the background color of the cards */
     color: white;
     font-family: Arial, sans-serif;
     font-size: 16px;
@@ -12,6 +12,11 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+  }
+
+  .logo-moriarty {
+    padding-top: 1.8%;
+    padding-left: 1.8%;
   }
   
   .logo-m {

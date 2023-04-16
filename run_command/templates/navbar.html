@@ -1,85 +1,185 @@
-{% load static %}
+{% load static %} {% comment %} All of the files are directed to this
+navbar.html {% endcomment %}
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>My Website</title>
-    <link href="{% static 'navbar.css' %}" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
+    <link href="{% static 'navbar.css' %}" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      .navbar {
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        /*position: sticky;*/
+        top: 0;
+        z-index: 999;
+        flex-direction: row;
+        min-height: 120px;
+        background-color: #000;
+        position: fixed; /* Set the navbar to fixed position */
+        width: 100%;
+        left: 0;
+      }
+
+      .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 150%;
+        display: flex;
+        flex-direction: row;
+        background-color: #000000; /*#1b2b4d*/
+        min-height: 130px;
+      }
+
+      /*Name*/
+      .navbar-logo {
+        display: flex;
+        color: aliceblue;
+        background-color: #000000;
+        font-size: 45px;
+        font-weight: 700;
+        padding-top: 1%;
+        padding-bottom: 2%;
+        padding-left: 0.5%;
+      }
+
+      .menu-icon {
+        height: 80px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        text-align: center;
+        margin-right: 22px;
+      }
+
+      .nav-menu {
+        height: 80px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        text-align: center;
+        /*margin-right: -22px;*/
+        z-index: 1000;
+      }
+
+      .icon {
+        font-size: 80px;
+        color: rgb(222, 226, 230);
+        border-left: 2px solid white;
+        padding-top: 2%;
+        padding-left: 26%;
+      }
+      /* Media Queries */
+      @media screen and (max-width: 1500px) {
+        .icon {
+          font-size: 62px;
+        }
+        .icon-hamburger-menu,
+        .icon-house,
+        .icon-circle,
+        .icon-tor {
+          font-size: 26px;
+        }
+      }
+    </style>
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="navbar-container">
-            <a class="navbar-logo" href="http://127.0.0.1:8000/web-terminal/" target="_blank" rel="noopener noreferrer">
-                Moriarty
+      <div class="navbar-container">
+        <a
+          class="navbar-logo"
+          href="http://127.0.0.1:8000"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Moriarty
+        </a>
+
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="http://127.0.0.1:8000/hambar" class="icon-hamburger-menu">
+              <i class="fas fa-bars"></i>
             </a>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="http://127.0.0.1:8000" class="icon-hamburger-menu">
-                        <i class="fas fa-bars"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="http://127.0.0.1:8000" class="icon-house">
-                        <i class="fas fa-home"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="https://www.torproject.org/" target="_blank" class="icon-tor">
-                        <i class="fa-solid fa-ghost"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/freq" class="icon-circle">
-                        <i class="far fa-clock"></i>
-                    </a>
-                </li>
-                    <li class="nav-item">
-                        <a href="/reconicon" class="icon">
-                            <i class="fas fa-search"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/weapon" class="icon">
-                            <i class="fa-solid fa-bomb"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/delivery" class="icon">
-                            <i class="far fa-envelope"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/exploit" class="icon">
-                            <i class="fas fa-door-open"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/install" class="icon">
-                            <i class="fas fa-download"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/control" class="icon">
-                            <i class="fa-solid fa-gamepad"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/objectives" class="icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/account" class="profile">
-                            <i class="fa-regular fa-circle-user"></i>
-                        </a>
-                    </li>
-            </ul>
-        </div>
+          </li>
+          <li class="nav-item">
+            <a href="http://127.0.0.1:8000" class="icon-house">
+              <i class="fas fa-home"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="https://www.torproject.org/"
+              target="_blank"
+              class="icon-tor"
+            >
+              <i class="fa-solid fa-ghost"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/freq" class="icon-circle">
+              <i class="far fa-clock"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/reconicon" class="icon">
+              <i class="fas fa-search"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/weapon" class="icon">
+              <i class="fa-solid fa-bomb"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/delivery" class="icon">
+              <i class="far fa-envelope"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/exploit" class="icon">
+              <i class="fas fa-door-open"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/install" class="icon">
+              <i class="fas fa-download"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/connections" class="icon">
+              <i class="fa-solid fa-gamepad"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/objectives" class="icon">
+              <i class="fas fa-laptop-code"></i>
+            </a>
+            {% comment %}
+          </li>
+          <li class="nav-item">
+            <a href="/account" class="profile">
+              <i class="fa-regular fa-circle-user"></i>
+            </a>
+          </li>
+          {% endcomment %}
+        </ul>
+      </div>
     </nav>
-<div class="content">
-    <!-- Your content here -->
-</div>
-</body>
+    <div class="content">
+      <!-- Your content here -->
+    </div>
+  </body>
 </html>

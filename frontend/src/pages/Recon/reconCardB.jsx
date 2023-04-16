@@ -19,7 +19,7 @@ const bull = (
 export default function ScanningCardW() {
   return (
 
-    <Card sx={{  minWidth: 455, width: '300px', height: '275px', position: 'absolute', top: '150px', right: '50px' }} className="card">
+    <Card sx={{  minWidth: 440, width: '300px', height: '275px', position: 'absolute', top: '150px', right: '50px' }} className="card">
   <CardContent>
     <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
     </Typography>

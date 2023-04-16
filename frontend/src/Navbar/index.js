@@ -1,34 +1,4 @@
-/*import React from "react";
-import { Nav, NavLink, NavMenu } from "./NavbarElements";
-import { GiMagnifyingGlass } from "react-icons/gi";
-
-const Navbar = () => {
-return (
-	<>
-	<Nav>
-		<NavMenu>
-		<NavLink to="/about" activeStyle>
-			<GiMagnifyingGlass/>
-		</NavLink>
-		<NavLink to="/contact" activeStyle>
-			Contact Us
-		</NavLink>
-		<NavLink to="/blogs" activeStyle>
-			Blogs
-		</NavLink>
-		<NavLink to="/sign-up" activeStyle>
-			Sign Up
-		</NavLink>
-		</NavMenu>
-	</Nav>
-	</>
-);
-};
-
-export default Navbar;*/
-
-
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { GiMagnifyingGlass } from "react-icons/gi";
 import { GiAnvilImpact } from "react-icons/gi";
 import { TfiEmail } from "react-icons/tfi";
@@ -39,15 +9,34 @@ import { BsPersonCircle } from "react-icons/bs"
 import { FaLaptopCode } from "react-icons/fa"
 import { CgTerminal } from "react-icons/cg"
 import { AiFillHome } from "react-icons/ai"
-import { AiFillClockCircle } from "react-icons/ai"
+import { BsGithub } from "react-icons/bs"
 import { MdMenu } from "react-icons/md"
 import { NavLink } from "./NavbarElements";
 import { SiTorproject } from "react-icons/si"
-import './hambar.css';
+import Tooltip from '@mui/material/Tooltip';
+import { styled } from '@mui/material/styles';
+import logo from './logo.png';
 
+import './hambar.css';
+const StyledTooltip = styled(({ className, ...props }) => (
+	<Tooltip {...props} classes={{ popper: className }} />
+  ))`
+	& .MuiTooltip-tooltip {
+	  background: #FF3B30;
+	  font-size: 18px;
+	}
+  `;
 
 const Navbar = () => {
+	const [width, setWidth] = useState(window.innerWidth);
 
+	useEffect(() => {
+	  const handleResize = () => setWidth(window.innerWidth);
+	  window.addEventListener("resize", handleResize);
+	  return () => window.removeEventListener("resize", handleResize);
+	}, []);
+
+	
 	const openNav = () => {
 		document.getElementById("mySidepanel").style.width = "250px";
 	}
@@ -60,14 +49,15 @@ return (
 		<div className='flex-container-top'>
 
 
-		<a
+		{/* <a
                 className="App-link"
                 href="http://127.0.0.1:8000/web-terminal/"
                 target="_blank"
                 rel="noopener noreferrer"
             >
                 Moriarty
-            </a>
+            </a> */}
+			<img src={logo} alt="logo" style={{width: '200px', height: '35px'}} className='logo-moriarty'/>
 
 
 
@@ -84,11 +74,15 @@ return (
 				<a href="javascript:void(0)" className="closebtn" onClick={closeNav}>
 					x
 				</a>
-				<a href="http://127.0.0.1:8000/hambar/">Iphone</a>
-				<a href="#">Resources</a>
-				<a href="#">Commands</a>
-				<a href="#">Antiforensics</a>
-				<a href="#">Anonymity</a>
+				<a href="http://127.0.0.1:8000/hambar#section-2">Recon</a>
+				<a href="#section-2">Weapon</a>
+				<a href="http://127.0.0.1:8000/hambar/#section-2">Delivery</a>
+				<a href="#">Exploit</a>
+				<a href="#">Install</a>
+				<a href="#">Control</a>
+				<a href="#">Actions-Obj</a>
+				<a href="#">Ip Map</a>
+
 
 			</div>
 
@@ -107,51 +101,78 @@ return (
             </a>
 
 			<>
-				<NavLink to="/freq" activeStyle>
-					<AiFillClockCircle className='icon-circle' id ='clock'/>
-				</NavLink>
 
-				<NavLink to="/reconicon" activeStyle>
-					<GiMagnifyingGlass className='icon' id ='recon'/>
-					<span className='tooltiptext'>Recon</span>
-				</NavLink>
+			<a href= "https://github.com/Fiery-Warrior/moriarty-matrix" target="_blank">
+				<BsGithub className='icon-circle' id ='clock'/>
+			</a>
 
-				<NavLink to="/weapon" activeStyle>
-					<GiAnvilImpact className='icon' id ='weaponization'/>
-					<span className='tooltiptext'>Weapon</span>
-				</NavLink>
 
-				<NavLink to="/delivery" activeStyle>
-					<TfiEmail className='icon' id ='delivery'/>
-					<span className='tooltiptext'>Delivery</span>
-				</NavLink>
+				<StyledTooltip  title="Recon">
+					<NavLink to="/reconicon" activeStyle>
+						<GiMagnifyingGlass className='icon' id ='recon'/>
+					</NavLink>
+				</StyledTooltip >
 
-				<NavLink to="/exploit" activeStyle>
-					<BsFillDoorOpenFill className='icon' id ='exploitation'/>
-					<span className='tooltiptext'>Exploiting</span>
-				</NavLink>
+				<StyledTooltip  title="Weapon">
+					<NavLink to="/weapon" activeStyle>
+						<GiAnvilImpact className='icon' id ='weaponization'/>
+					</NavLink>
+				</StyledTooltip >
 
-				<NavLink to="/install" activeStyle>
-					<FaDownload className='icon' id ='install'/>
-					<span className='tooltiptext'>Installing</span>
-				</NavLink>
+				<StyledTooltip  title="Delivery">
+					<NavLink to="/delivery" activeStyle>
+						<TfiEmail className='icon' id ='delivery'/>
+					</NavLink>
+				</StyledTooltip >
 
-				<NavLink to="/control" activeStyle>
-					<IoLogoGameControllerB className='icon' id ='command-control'/>
-					<span className='tooltiptext'>Control</span>
-				</NavLink>
+				<StyledTooltip  title="Exploit">
+					<NavLink to="/exploit" activeStyle>
+						<BsFillDoorOpenFill className='icon' id ='exploitation'/>
+					</NavLink>
+				</StyledTooltip >
 
-				<NavLink to="/objectives" activeStyle>
-					<FaLaptopCode className='icon' id ='actions-on-objective'/>
-					<span className='tooltiptext'>Objectives</span>
-				</NavLink>
+
+				<StyledTooltip  title="Install">
+					<NavLink to="/install" activeStyle>
+						<FaDownload className='icon' id ='install'/>
+					</NavLink>
+				</StyledTooltip >
+
+				<StyledTooltip  title="Control">
+					{/* <NavLink to="/control" activeStyle> */}
+					<a href="http://127.0.0.1:8000/connections/"> {/** onClick={() => window.location.reload()} */}
+
+						<IoLogoGameControllerB className='icon' id ='command-control'/>
+						  </a>
+
+					{/* </NavLink> */}
+				</StyledTooltip >
+
+				<StyledTooltip  title="Objective">
+					<NavLink to="/objectives" activeStyle>
+						<FaLaptopCode className='icon' id ='actions-on-objective'/>
+					</NavLink>
+				</StyledTooltip >
+
 			</>
 
+			<a
+				href="http://127.0.0.1:8000/web-terminal/"
+				target="_blank"
+				style={{ display: width > 1515 ? "block" : "none" }}
+			>
+				<CgTerminal className="terminal-icon" id="terminal" />
+			</a>
+			<BsPersonCircle
+				className="profile"
+				id="profile"
+				style={{ display: width > 1515 ? "block" : "none" }}
+			/>
 
-			<a href="http://127.0.0.1:8000/web-terminal/" target="_blank">
+			{/* <a href="http://127.0.0.1:8000/web-terminal/" target="_blank">
             <CgTerminal className= 'terminal-icon' id = 'terminal' />
             </a>
-            <BsPersonCircle className='profile' id = 'profile'/>
+            <BsPersonCircle className='profile' id = 'profile'/> */}
 
 		</div>
 		{/*<footer className="footer">

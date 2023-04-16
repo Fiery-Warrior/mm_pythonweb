@@ -1,7 +1,8 @@
 
 
 .App {
-  background-color: #151313;
+  /*Effects http://127.0.0.1:8000/exploit/*/
+  background-color: #3d4548; /*#2C3639*//*#4e6d76;*//*#151313;*/
   border-bottom: 3px solid #fff;
 }
 
@@ -82,7 +83,7 @@ and no smaller than ____px the terminal-output width can be no longer than 55px 
   color: rgb(222, 226, 230);
   border-left: 2px solid white;
   padding-top: 2%;
-  padding-left: 26%;
+  padding-left: 10%;
   
 
 
@@ -128,7 +129,7 @@ and no smaller than ____px the terminal-output width can be no longer than 55px 
   border: 7px solid	rgb(220,20,60); 
   border-radius: 12px;
 }*/
-.icon:hover, .terminal-icon:hover {
+.icon:hover, .terminal-icon:hover, .icon-circle:hover, .icon-house:hover, .icon-hamburger-menu:hover {
   color: rgb(255, 59,48);
 }
 /*When the width is 1200 px or less*/
@@ -141,6 +142,17 @@ and no smaller than ____px the terminal-output width can be no longer than 55px 
   }
   .profile {
     font-size: 40px;
+  }
+}
+@media only screen and (max-width: 1450px) {
+  .icon {
+      font-size: 100px;
+  }
+  .App-link {
+    padding-bottom: 0%;
+  }
+  .profile {
+    font-size: 30px;
   }
 }
 
@@ -175,7 +187,7 @@ and no smaller than ____px the terminal-output width can be no longer than 55px 
   display: inline-block;
   border-bottom: 1px dotted black;
 }
-/*
+
 .tooltiptext {
   visibility: hidden;
   width: 110px;
@@ -197,7 +209,7 @@ and no smaller than ____px the terminal-output width can be no longer than 55px 
 .icon:hover .tooltiptext {
   visibility: visible;
 }
-*/
+/*
 .tooltiptext {
   visibility: hidden;
   width: 120px;
@@ -213,7 +225,7 @@ and no smaller than ____px the terminal-output width can be no longer than 55px 
 .tooltiptext:hover {
   visibility: visible;
 }
-
+*/
 
 .space {
   background-color:  #4e5965; /*#fff;*/
@@ -249,7 +261,7 @@ and no smaller than ____px the terminal-output width can be no longer than 55px 
 
 
   z-index: 1;
-  height: 450px;
+  height: 600px;
   top: 121px;
   left: 0;
   background-color: #111;
@@ -281,9 +293,9 @@ and no smaller than ____px the terminal-output width can be no longer than 55px 
 .icon-hamburger-menu {
   cursor: pointer;
   background-color: transparent;
-  font-size: 43px;
+  font-size: 33px;
   color: white;
-  padding: 10px 15px;
+  padding: 15px 15px;
   border: none;
 
 
