@@ -29,13 +29,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 7px !important;
+    /* box-shadow: 0 1px 2px 0 rgba(43, 50, 58, 0.24) !important; */
+    /* box-shadow: 10px 9px 12px 10px rgba(43,50,58,.24)!important; */
+    box-shadow: 2px 5px 4px 3px black!important;
     /*text-align: center;*/
   }
   
   .card:hover {
-    background-color: #F7F5F5;
-    height: 275px;
+    /* background-color: #b63636 !important; */ /*#f6f5f5 !important*/
+    height: 275px !important;
+    box-shadow: 10px 6px 6px 6px black!important;
+
   }
+  @media screen and (max-width: 1515px) {
+    .card:hover {
+        height: 235px !important;
+    }
+}
+
   
   .title {
     font-size: 50px;

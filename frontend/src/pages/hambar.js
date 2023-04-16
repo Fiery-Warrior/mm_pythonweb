@@ -1,48 +1,86 @@
 import React from 'react';
-import './hambar.css';
 
 function Hambar() {
+  const linkStyle = {
+    color: 'white',
+    textDecoration: 'none',
+    borderBottom: '1px solid yellow',
+  };
+  
   return (
-    <div className="App">
+    <div>
+      <ul>
 
-      <main>
-        <section className="connect">
-          <h2>Connect phone/App</h2>
-          <p>To download the phone application you can visit moriarty.com or download directly from the Apps Store. If you have made an account on this website the mobile app will be able to connect and display Your Objective Notes, a proxy button, some scanners, and other information you have saved to your account.</p>
-        </section>
-        <section className="anti-forensics">
-          <h2>Anti-forensics</h2>
-          <p>Anti-forensics can be used into ways (or specially use them together)</p>
-          <ol>
-            <li>Hiding any tracks you were there</li>
-            <li>Obfuscating or deleting records, showing that something happened, but unsure what</li>
-          </ol>
-        </section>
-        <section className="commands">
-          <h2>Commands</h2>
-          <ul>
-            <li><strong>Linux</strong><br />$ls</li>
-            <li><strong>Mac</strong><br />$ifconfig</li>
-            <li><strong>Windows</strong><br />$dir</li>
-          </ul>
-        </section>
-        <section className="anonymity">
-          <h2>Anonymity</h2>
-          <p>Use Tor and</p>
-        </section>
-        <section className="resources">
-          <h2>Resources</h2>
-          <p>Some great websites to learn about ________</p>
-          <ul>
-            <li><a href="#">Website 1</a></li>
-            <li><a href="#">Website 2</a></li>
-            <li><a href="#">Website 3</a></li>
-          </ul>
-        </section>
-      </main>
+        <h2 id = "#section-2">Recon</h2>
+        <li><a href="/recon" style={linkStyle}>Recon Cards</a></li>
+        <li><a href="/profile_info" style={linkStyle}>Profile Info</a></li>
+        <li><a href="/sherlock/search" style={linkStyle}>Sherlock</a></li>
+        <li><a href="/reconicon" style={linkStyle}>Reconicon</a></li>
+        <br/>
 
-    </div>
-  );
-}
+        <h2>Weapon</h2>
+        <li><a href="/weapon" style={linkStyle}>Weapon Cards</a></li>
+        <li><a href="/filedisplayw" style={linkStyle}>File Display Reverse Shell</a></li>
+        <li><a href="/filedisplaykey" style={linkStyle}>File Display Key</a></li>
+        <li><a href="/filedisplayvirus" style={linkStyle}>File Display Virus</a></li>
+        <li><a href="/filedisplayworm" style={linkStyle}>File Display Worm</a></li>
+        <li><a href="/filedisplayjacking" style={linkStyle}>File Display Jacking</a></li>
+        <li><a href="/filedisplaydos" style={linkStyle}>File Display Dos</a></li>
+        <br/>
+
+
+        <h2>Delivery</h2>
+        <li><a href="/delivery" style={linkStyle}>Delivery Cards</a></li>
+        <li><a href="/filedisplaytext" style={linkStyle}>File Display Phone Number</a></li>
+        <li><a href="/filedisplaybluetooth" style={linkStyle}>Bluetooth Transfer</a></li>
+        <li><a href="/filedisplayemail" style={linkStyle}>Email</a></li>
+        <li><a href="/filedisplayftp" style={linkStyle}>FTP</a></li>
+        <li><a href="/filedisplayusb" style={linkStyle}>USB</a></li>
+        <br/>
+
+
+        <h2>Exploit</h2>
+        <li><a href="/exploit" style={linkStyle}>Exploit</a></li>
+        <br/>
+
+
+        <h2>Install</h2>
+        <li><a href="/install" style={linkStyle}>Install</a></li>
+        <br/>
+
+
+        <h2>Control</h2>
+        <li><a href="/filedisplaycontrol" style={linkStyle}>Connection Code</a></li>
+        <li><a href="/connections" style={linkStyle}>Connections</a></li>
+        <br/>
+
+
+        <h2>Objectives</h2>
+        <li><a href="/objectives" style={linkStyle}>Objective Cards</a></li>
+        <li><a href="/run_command" style={linkStyle}>Reverse Shell Controller</a></li>
+        <br/>
+
+
+        <h2>Other</h2>
+        <li><a href="/web-terminal" style={linkStyle}>Web Terminal</a></li>
+        <li><a href="/packet_capture" style={linkStyle}>Packet Capture</a></li>
+        <li><a href="/home" style={linkStyle}>Home</a></li>
+        <li><a href="/hambar" style={linkStyle}>Hambar</a></li>
+        <br/>
+
+        <h2>VPN-tracker Info</h2>
+        <li><a href="/tor_map" style={linkStyle}>Tor Map</a></li>
+        <li><a href="/ip_map" style={linkStyle}>IP Map</a></li>
+        <br/>
+
+        <h2>Not Using</h2>
+        <li><a href="/control" style={linkStyle}>Control</a></li>
+        <li><a href="/freq" style={linkStyle}>Frequency</a></li>
+        <li><a href="/account" style={linkStyle}>Account</a></li>
+
+</ul>
+</div>
+);
+};
 
 export default Hambar;

@@ -60,11 +60,7 @@ function NavBarTop() {
             </section>
 
 
-{/*
-            <section className='icon' id ='recon'>
-              <GiMagnifyingGlass to="/about" activeStyle/>
-              <span className='tooltiptext'>Recon</span>
-  </section>*/}
+
               <section className='icon' id ='recon'>
                 <GiMagnifyingGlass />
                 <span className='tooltiptext'>Recon</span>
@@ -95,10 +91,12 @@ function NavBarTop() {
               <FaLaptopCode/>
               <span className='tooltiptext'>Objectives</span>
             </section>
-               <a href="http://127.0.0.1:8000/web-terminal/" target="_blank">
+
+               {/* <a href="http://127.0.0.1:8000/web-terminal/" target="_blank">
             <CgTerminal className= 'terminal-icon' id = 'terminal' />
             </a>
-            <BsPersonCircle className='profile' id = 'profile'/>
+            <BsPersonCircle className='profile' id = 'profile'/> */}
+
         </div>
     </div>
     

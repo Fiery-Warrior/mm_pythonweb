@@ -11,6 +11,7 @@ const Control = () => {
 return (
 	
 <div>
+    {/* <h1>Control other Machine, Retrieve data...</h1> */}
     <BasicCard/>
     <CompanyCard/>
     <ReconA/>

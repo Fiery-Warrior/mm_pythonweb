@@ -103,7 +103,16 @@ conn.close()
       </div>
       <div className="file-display-item">
         <h2 className="file-display-heading">Description</h2>
-        <p className="file-display-description">This page displays the contents of server.py and client.py files.</p>
+        <p className="file-display-description">This page displays the contents of server.py and client.py files.
+        <br/>
+        The first code is a simple Django view that runs a command on a remote server. It accepts a command from a user via an HTTP POST request and sends it to a server over a socket connection. It then receives the output of the command and renders it to an HTML template. This code can be used to remotely execute commands on a server or a remote device.
+        <br/>
+        <br/>
+        The second code is a server program that listens for incoming connections over a socket connection. It accepts commands from the connected client, including a "quit" command to terminate the connection. If the command is not "quit," the code executes the command using subprocess and returns the output to the client. It also includes a command to search for nearby Bluetooth devices. This code can be used to remotely control a device or to monitor a remote device.        
+        
+        
+        
+        </p>
       </div>
     </div>
   );
