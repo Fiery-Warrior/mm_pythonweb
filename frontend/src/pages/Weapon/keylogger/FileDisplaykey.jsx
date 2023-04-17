@@ -32,7 +32,7 @@ with Listener(on_press=on_press) as listener:
     try:
         listener.join() # Wait for the listener to end
     except KeyboardInterrupt:
-        pass # If the user interrupts the program, exit gracefully
+        pass # If the user interrupts the program, exit 
 
             `}
           </code>

