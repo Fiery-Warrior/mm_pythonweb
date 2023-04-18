@@ -50,6 +50,9 @@ For educational purposes only (any mis-uses of this project is ONLY the falt of 
 
 - Is an offensive-focused educational ethical-hacking web-app (localhost) experience based on Lockheed Martin’s Cyber Kill Chain
 
+- How to start:
+  - Got to: \mm_pythonweb> python manage.py runserver
+
 ## Features
 
 
