@@ -8,11 +8,11 @@
 </picture>
 
 
-For educational purposes only (any mis-uses of this project is ONLY the falt of the user
+For educational purposes only (any mis-uses of this project is ONLY the user's fault)
 
 
 
-## Table of Contents (Optional)
+## Table of Contents
 
 
 - [Dependencies](#Dependencies)
@@ -70,13 +70,19 @@ Six Parts
 
 ```Django```
 
-```React```
-
 [Sherlock-Project](https://github.com/sherlock-project/sherlock)
 
 ```pip install requests```
 
+```Reactjs```
+
 ```npm install react-scripts --save```
+
+```npm i react-router-dom```
+
+```npm install @mui/material @emotion/react @emotion/styled```
+
+
 
 
 ## Credits
