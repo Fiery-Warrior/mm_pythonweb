@@ -57,15 +57,23 @@ For educational purposes only (any mis-uses of this project is ONLY the user's f
 ## Features
 
 
-<details>
-<summary>Recon</summary>
-- Identify information about target
-https://user-images.githubusercontent.com/123214637/233183999-2bac41c8-83ea-4f78-b988-a697d781c942.mp4
-
-</details>
 
 
 
+
+https://user-images.githubusercontent.com/123214637/233187460-1d4d2494-410b-4023-83e7-d850918d0a8f.mp4
+
+
+
+https://user-images.githubusercontent.com/123214637/233187464-4288c009-8e64-4dec-b665-78b1342ecc47.mp4
+
+
+
+https://user-images.githubusercontent.com/123214637/233187465-aced0448-2bb1-406a-b5d2-ee8626df8958.mp4
+
+
+
+https://user-images.githubusercontent.com/123214637/233187473-137313e7-efa6-4c23-8f09-77fdc001127b.mp4
 
 
 
