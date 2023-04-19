@@ -1,22 +1,19 @@
 # Moriarty Matrix
 
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Fiery-Warrior/mm_pythonweb/main/frontend/src/Navbar/logo.png" width="1000">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Fiery-Warrior/mm_pythonweb/main/frontend/src/Navbar/logo.png" width="1000">
-  <img alt="Moriarty Matrix Logo" src="https://raw.githubusercontent.com/Fiery-Warrior/mm_pythonweb/main/frontend/src/Navbar/logo.png" width="1000">
-</picture>
+<p align="center">
+  <img width="460" height="470" src="https://github.com/Fiery-Warrior/mm_pythonweb/blob/main/READmeSources/Images/MoriartyMatrix.png">
+</p>
 
 
-For educational purposes only (any mis-uses of this project is ONLY the user's fault)
 
 
 
 ## Table of Contents
 
 
-- [Dependencies](#Dependencies)
-- [Usage](#usage)
+- [Dependencies](#dependencies)
+- [Features](#features)
 - [Labs](#labs)
 - [Credits](#credits)
 - [License](#license)
@@ -53,6 +50,10 @@ For educational purposes only (any mis-uses of this project is ONLY the user's f
 
 - How to start:
   - Got to: \mm_pythonweb> python manage.py runserver
+  
+- Reminders:
+  - For educational purposes only (any mis-uses of this project is ONLY the user's fault)
+
 
 ## Features
 
