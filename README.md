@@ -59,10 +59,13 @@ For educational purposes only (any mis-uses of this project is ONLY the user's f
 
 <details>
 <summary>Recon</summary>
-
-Six Parts
+- Identify information about target
+https://user-images.githubusercontent.com/123214637/233183999-2bac41c8-83ea-4f78-b988-a697d781c942.mp4
 
 </details>
+
+
+
 
 
 
