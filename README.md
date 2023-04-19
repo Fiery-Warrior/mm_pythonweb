@@ -17,6 +17,7 @@ For educational purposes only (any mis-uses of this project is ONLY the user's f
 
 - [Dependencies](#Dependencies)
 - [Usage](#usage)
+- [Labs](#labs)
 - [Credits](#credits)
 - [License](#license)
 
@@ -83,7 +84,10 @@ Six Parts
 ```npm install @mui/material @emotion/react @emotion/styled```
 
 
-
+## Labs
+- Lab 1: Reverse Shell 
+- Lab 2: 
+- Lab 3: Ransomware
 
 ## Credits
 
