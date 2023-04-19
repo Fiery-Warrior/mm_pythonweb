@@ -86,7 +86,7 @@ Six Parts
 
 ## Labs
 - Lab 1: Reverse Shell 
-- Lab 2: 
+- Lab 2: Keylogger
 - Lab 3: Ransomware
 
 ## Credits
