@@ -25,6 +25,8 @@
 - What is the motivation for this project? 
   - To create awareness of the hacking-lifecycle so it better prepares students, employees, cyber-enthusiasts, and security testers. 
   
+- Currently optimized for window sizes between 1095px and 1535px
+
 - Why did you build this project?
   - Provides a sleek web-based UI and UX instead of the usual command line interface.  Moriarty’s Matrix, allows a smooth transition in to this field, provides numerous tools, explains uses, and allows the user to be the demonstrator of the possible attack. Moreso, because of the relatable UI of Moriarty’s Matrix, it allows people with little cyber experience to understand and perform attacks (for educational and training purposes only). 
   
