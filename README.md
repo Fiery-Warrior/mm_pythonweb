@@ -27,8 +27,8 @@
   
 - Currently optimized for window sizes between 1095px and 1535px
 
-- Why did you build this project?
-  - Provides a sleek web-based UI and UX instead of the usual command line interface.  Moriarty’s Matrix, allows a smooth transition in to this field, provides numerous tools, explains uses, and allows the user to be the demonstrator of the possible attack. Moreso, because of the relatable UI of Moriarty’s Matrix, it allows people with little cyber experience to understand and perform attacks (for educational and training purposes only). 
+- Why did I build this project?
+  - To provide a sleek web-based UI and UX instead of the usual command line interface.  Moriarty’s Matrix, allows a smooth transition in to this field, provides numerous tools, explains uses, and allows the user to be the demonstrator of the possible attack. Moreso, because of the relatable UI of Moriarty’s Matrix, it allows people with little cyber experience to understand and perform attacks (for educational and training purposes only). 
   
 - What problem does it solve?
   - For less technical audinces it can be be difficult to use the command line interface.
@@ -61,27 +61,25 @@
 
 
 
-
-
-
-https://user-images.githubusercontent.com/123214637/233187460-1d4d2494-410b-4023-83e7-d850918d0a8f.mp4
-
-
-
-https://user-images.githubusercontent.com/123214637/233187464-4288c009-8e64-4dec-b665-78b1342ecc47.mp4
-
-
-
 https://user-images.githubusercontent.com/123214637/233187465-aced0448-2bb1-406a-b5d2-ee8626df8958.mp4
-
 
 
 https://user-images.githubusercontent.com/123214637/233187473-137313e7-efa6-4c23-8f09-77fdc001127b.mp4
 
 
+https://user-images.githubusercontent.com/123214637/233187464-4288c009-8e64-4dec-b665-78b1342ecc47.mp4
+
+
+https://user-images.githubusercontent.com/123214637/233187460-1d4d2494-410b-4023-83e7-d850918d0a8f.mp4
+
+
+https://user-images.githubusercontent.com/123214637/233685181-1fe8cd0d-16a7-43b8-ae5e-e7b89328f77f.mp4
 
 
 ## Dependencies
+
+
+
 
 ```Django```
 
