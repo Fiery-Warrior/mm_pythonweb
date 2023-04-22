@@ -99,6 +99,7 @@ https://user-images.githubusercontent.com/123214637/233686845-1064fd3c-a97d-4e61
 
 ```npm install @mui/material @emotion/react @emotion/styled```
 
+```npm install react-icons --save```
 
 ## Labs
 - Lab 1: Reverse Shell 
