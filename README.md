@@ -60,6 +60,12 @@
 ## Features
 
 
+[![Watch the video](https://github.com/Fiery-Warrior/mm_pythonweb/blob/main/READmeSources/Images/cover.png)](https://clipchamp.com/watch/PUaV9L6zOLF)
+
+
+- Walk video of entire Pub site: https://clipchamp.com/watch/PUaV9L6zOLF
+
+
 
 https://user-images.githubusercontent.com/123214637/233187465-aced0448-2bb1-406a-b5d2-ee8626df8958.mp4
 
@@ -78,6 +84,7 @@ https://user-images.githubusercontent.com/123214637/233187460-1d4d2494-410b-4023
 
 
 https://user-images.githubusercontent.com/123214637/233686845-1064fd3c-a97d-4e61-9f1f-e59d669b3871.mp4
+
 
 
 ## Dependencies
