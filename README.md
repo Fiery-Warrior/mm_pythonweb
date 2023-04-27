@@ -13,6 +13,7 @@
 
 
 - [Dependencies](#dependencies)
+- [Feedback](#feedback)
 - [Features](#features)
 - [Labs](#labs)
 - [Credits](#credits)
@@ -56,6 +57,9 @@
 - Reminders:
   - For educational purposes only (any mis-uses of this project is ONLY the user's fault)
 
+
+### Feedback
+- Please provide ANY and All feedback and suggestions you have on this project. Please reach out to me at: FieryWarrior@proton.me
 
 ## Features
 
