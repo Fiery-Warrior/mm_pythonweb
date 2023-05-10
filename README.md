@@ -96,7 +96,7 @@ https://user-images.githubusercontent.com/123214637/233686845-1064fd3c-a97d-4e61
 
 
 
-```Django```
+```python Django```
 
 [Sherlock-Project](https://github.com/sherlock-project/sherlock)
 
